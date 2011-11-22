@@ -2,3 +2,15 @@ QuickWizard
 ==========
 
 *Start building a Java Enterprise application with ZERO configuration.*
+
+Supports : 
+
+	Struts
+	Spring
+	Hibernate
+	CXF
+	JQuery
+	JSP
+	Tiles
+	
+This list is incomplete as the development is in progress.	
