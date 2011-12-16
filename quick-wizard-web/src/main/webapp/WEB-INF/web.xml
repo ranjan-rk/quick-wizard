@@ -7,6 +7,8 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
 			classpath:quickwizard-beans.xml
+			classpath*:service-beans.xml
+			classpath:cxf-beans.xml
 		</param-value>
 	</context-param>
 	<context-param>

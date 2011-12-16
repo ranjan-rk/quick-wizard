@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans" xmlns:cxf="http://cxf.apache.org/core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:cxf="http://cxf.apache.org/core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:util="http://www.springframework.org/schema/util" xmlns:jaxrs="http://cxf.apache.org/jaxrs"
 	xsi:schemaLocation="
 http://www.springframework.org/schema/beans
@@ -12,6 +13,7 @@ http://cxf.apache.org/core
 http://cxf.apache.org/schemas/core.xsd">
 
 	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath*:service-beans.xml" />
 
 	<jaxrs:server id="connectionService" address="/">
 		<jaxrs:serviceBeans>
@@ -22,12 +24,5 @@ http://cxf.apache.org/schemas/core.xsd">
 			<entry key="json" value="application/json" />
 		</jaxrs:extensionMappings>
 	</jaxrs:server>
-
-	<jaxrs:client id="quickWizardService" address="http://localhost:8080/quickwizard/services" serviceClass="org.quick.wizard.service.IQuickWizardService"
-		inheritHeaders="true">
-		<jaxrs:headers>
-			<entry key="Content-Type" value="application/xml" />
-		</jaxrs:headers>
-	</jaxrs:client>
 
 </beans>
