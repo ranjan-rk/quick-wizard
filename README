@@ -5,12 +5,20 @@ QuickWizard
 
 Supports : 
 
-	Struts
 	Spring
 	Hibernate
 	CXF
-	JQuery
+	Struts
 	JSP
 	Tiles
+	JQuery
+	Backbone.js
+	JQuery Template 
+	JQuery Pub-Sub 
+	JQuery Namespace 
+	Log4j
+	Maven
 	
 This list is incomplete as the development is in progress.	
+
+The goal of this project is to have a nice technology stack integrated in the system so that development on any Java Enterprise Application can be started from day one. That means the development team will not have to put any effort in - for example installing hibernate or spring or CXF etc.

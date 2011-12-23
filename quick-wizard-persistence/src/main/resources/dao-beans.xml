@@ -4,10 +4,8 @@
 http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-	<import resource="classpath*:hibernate-beans.xml" />
-	<import resource="classpath*:dataaccess-beans.xml" />
-
-	<bean id="quickWizardService" class="org.quick.wizard.service.impl.QuickWizardServiceImpl">
-		<!--property name="quickWizardDAO" ref="quickWizardDAO"></property-->
+	<bean id="quickWizardDAO" class="org.quick.wizard.persistence.dao.impl.QuickWizardDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
+
 </beans>

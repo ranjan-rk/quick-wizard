@@ -12,7 +12,7 @@
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean" p:dataSource-ref="dataSource">
 		<property name="annotatedClasses">
 			<list>
-				<value>org.quick.wizard.persistence.entity.Developer</value>
+				<!-- value>org.quick.wizard.persistence.entity.Developer</value-->
 			</list>
 		</property>
 		<property name="configurationClass" value="org.hibernate.cfg.AnnotationConfiguration" />
@@ -28,7 +28,7 @@
 	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
-				<value>${jdbc-properties}</value>
+				<value>classpath*:jdbc.properties</value>
 			</list>
 		</property>
 		<property name="ignoreUnresolvablePlaceholders" value="true" />

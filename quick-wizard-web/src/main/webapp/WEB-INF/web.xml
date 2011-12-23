@@ -7,7 +7,8 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
 			classpath:quickwizard-beans.xml
-			classpath*:cxf-beans.xml
+			classpath*:service-beans.xml
+			classpath:cxf-beans.xml
 		</param-value>
 	</context-param>
 	<context-param>
@@ -29,7 +30,9 @@
 	<listener>
 		<listener-class>org.apache.tiles.web.startup.TilesListener</listener-class>
 	</listener>
-
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
 	<!-- Servlets -->
 	<servlet>
 		<servlet-name>CXFServlet</servlet-name>
@@ -45,7 +48,7 @@
 	</session-config>
 
 	<welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
 
 </web-app>
