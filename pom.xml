@@ -6,6 +6,7 @@
 	<packaging>pom</packaging>
 	<name>QuickWizard</name>
 	<modules>
+		<module>quick-wizard-configuration</module>
 		<module>quick-wizard-web</module>
 		<module>quick-wizard-service</module>
 		<module>quick-wizard-persistence</module>
